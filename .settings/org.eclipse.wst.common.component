@@ -12,7 +12,7 @@
                 
         <property name="java-output-path" value="/personal-finance-system/target/classes"/>
                 
-        <property name="context-root" value="hello-world"/>
+        <property name="context-root" value=""/>
             
     </wb-module>
     
