@@ -23,7 +23,7 @@ public class TransactionDAO {
 	public void addBill(Transaction bill) {
 		try {
 			Connection conn = JdbcUtil.getConnection();
-			String sql = "INSERT INTO bill (user_id, amount,bill_type, expend_type, subscribe_id, category, remark,bill_time) values(?,?,?,?,?) ";
+			String sql = "INSERT INTO bill (user_id, amount, bill_type, expend_type, subscribe_id, category, remark,bill_time) values(?,?,?,null,?,?,?,?,?) ";
 			PreparedStatement stm = conn.prepareStatement(sql);
 			stm.setInt(1, bill.getUser_id());
 			stm.setDouble(2, bill.getAmount());
@@ -31,7 +31,7 @@ public class TransactionDAO {
 			stm.setString(4, bill.getExpend_type());
 			stm.setString(5, bill.getCategory());
 			stm.setString(6, bill.getRemark());
-			stm.setDate(5, bill.getBill_time());
+			stm.setDate(7, bill.getBill_time());
 			int res = stm.executeUpdate();
 
 			JdbcUtil.free(null, stm, conn);

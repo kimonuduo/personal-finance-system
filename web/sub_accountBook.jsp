@@ -1,4 +1,5 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <html>
 <head>
     <title>Account Book</title>
@@ -19,27 +20,24 @@
     </tr>
     </thead>
     <tbody>
-    <tr>
-        <td>001</td>
-        <td>2023-04-01</td>
-        <td>餐饮</td>
-        <td>50.00</td>
-    </tr>
-    <tr>
-        <td>002</td>
-        <td>2023-04-10</td>
-        <td>交通</td>
-        <td>20.00</td>
-    </tr>
-    <tr>
-        <td>003</td>
-        <td>2023-04-20</td>
-        <td>购物</td>
-        <td>100.00</td>
-    </tr>
+    
+    <c:forEach items="${transactionsList}" var="transaction" >
+ 		<tr>
+ 			<td>${transaction.id}</td>
+ 			<td>${transaction.bill_time}</td>
+ 			<td>${transaction.category}</td>
+ 			<td>${transaction.amount}</td>
+ 		</tr>
+ 	</c:forEach>
+  
     </tbody>
 </table>
 </div>
+
+
+<script type="text/javascript">
+    var value =<%=request.getAttribute("transactionsList") %>;
+</script>
 <script type="text/javascript" src="js/tlist_accountBook&stat.js"></script>
 </body>
 </html>

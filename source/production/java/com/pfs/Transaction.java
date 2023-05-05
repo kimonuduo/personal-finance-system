@@ -32,6 +32,17 @@ public class Transaction{
 		this.bill_time = bill_time;
 	}
 	
+	@Override
+	public String toString() {
+		return "Transaction [id=" + id + ", "
+				+ "user_id=" + user_id 
+				+ ", amount=" + amount 
+				+ ", bill_type="+ bill_type 
+				+ ", expend_type=" + expend_type 
+				+ ", category=" + category 
+				+ ", remark=" + remark 
+				+ ", bill_time="+ bill_time + "]";
+	}
 
 	public Double getamount() {
 		return amount;
@@ -107,15 +118,6 @@ public class Transaction{
 		this.expend_type = expend_type;
 	}
 
-
-	public String getSubscribe_id() {
-		return subscribe_id;
-	}
-
-
-	public void setSubscribe_id(String subscribe_id) {
-		this.subscribe_id = subscribe_id;
-	}
 
 
 	public String getCategory() {

@@ -1,4 +1,4 @@
-package com.system.util;
+package com.pfs;
 
 import java.io.IOException;
 import java.sql.Connection;
@@ -10,22 +10,14 @@ import java.util.Properties;
 
 public class JdbcUtil {
 
-	private static String driver;
-	private static String url;
-	private static String username;
-	private static String password;
-	private static Properties pr = new Properties();
+	private static String driver = "com.mysql.cj.jdbc.Driver";
+	private static String url = "jdbc:mysql://localhost:3306/new_schema";
+	private static String username = "root";
+	private static String password = "123456";
 
 	static {
 		try {
-			pr.load(JdbcUtil.class.getClassLoader().getResourceAsStream("jdbc.properties"));
-			driver = pr.getProperty("jdbc.driver");
-			url = pr.getProperty("jdbc.url");
-			username = pr.getProperty("jdbc.username");
-			password = pr.getProperty("jdbc.password");
 			Class.forName(driver);
-		} catch (IOException e) {
-			e.printStackTrace();
 		} catch (ClassNotFoundException e) {
 			e.printStackTrace();
 		}

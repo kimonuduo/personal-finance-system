@@ -17,12 +17,15 @@ public class Servlet_sub_accountBook extends HttpServlet
 
 	private static final long serialVersionUID = 1L;
 	
-    @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
     	TransactionDAO transactionDAO = new TransactionDAO();
     	List<Transaction> transactionsList = transactionDAO.getAllTransactions(1);
     	request.getSession().setAttribute("transactionsList", transactionsList);
     	request.getRequestDispatcher("/sub_accountBook.jsp").forward(request, response);
     }
+    
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		doGet(request, response);
+	}
 
 }

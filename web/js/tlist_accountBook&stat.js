@@ -1,4 +1,4 @@
-//假设jsp接受的data是{"billNo": "004", "billTime": "2023-04-25", "category": "餐饮", "amount": "30.00"}
+//假设jsp接受的data是{"billNo": "004", "billTime": "2023-04-25", "category": "餐饮", "amount": "30.00"
 
 var tbody = document.querySelector("table tbody");//选择jsp中的table 和 tbody
 
