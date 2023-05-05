@@ -13,14 +13,14 @@
     <li>
       <a href="sub_accountBook.jsp">📒 Account Book</a>
       <ul>
-        <li><a href="#">Edit Bills</a></li>
-        <li><a href="#">Edit Subscribe</a></li>
+        <li><a href="sub_acc_editBills.jsp">Edit Bills</a></li>
+        <li><a href="sub_acc_editSub.jsp">Edit Subscribe</a></li>
       </ul>
     </li>
     <li><a href="sub_stat.jsp">📈Income & Expend  Stat</a>
       <ul>
-        <li><a href="#">Annual</a></li>
-        <li><a href="#">Monthly</a></li>
+        <li><a href="sub_stat_annual.jsp">Annual</a></li>
+        <li><a href="sub_stat_annual.jsp">Monthly</a></li>
       </ul>
     </li>
     <li><a href="sub_intelliPredic.jsp">🧠Intelligent Prediction</a></li>
