@@ -40,5 +40,6 @@
     </tbody>
 </table>
 </div>
+<script type="text/javascript" src="js/tlist_accountBook&stat.js"></script>
 </body>
 </html>
