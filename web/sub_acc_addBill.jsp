@@ -10,7 +10,7 @@
 <%@include file="header.jsp"%>
 <div class="site-content">
   <h1>Edit Bills</h1>
-  <form action="sub_acc_addBills" method="post">
+  <form action="sub_acc_addBill" method="post">
     <div>
       <label for="btime">BillTime：</label>
       <input type="text" id="btime" name="btime" required>
@@ -36,7 +36,7 @@
       </select>
       <span id="categoryError" style="color: red;"></span>
     </div>
-
+	<input type="hidden" id="selectedLabel" name="selectedLabel" value="">
     <div>
       <label for="amount">Amount：</label> <input type="text" id="amount" name="amount" required>
       <span id="amountError" style="color: red;"></span>
@@ -85,6 +85,14 @@
       }
     });
   </script>
+  <script>
+  document.getElementById('category').addEventListener('change', function() {
+    var select = this;
+    var option = select.options[select.selectedIndex];
+    var optgroup = option.parentNode;
+    document.getElementById('selectedLabel').value = optgroup.label;
+  });
+</script>
 
 </div>
 </body>

@@ -32,6 +32,7 @@
                 <td>${(transaction.bill_type == "0") ? "income" : (transaction.bill_type == "1") ? "expend" : ""}</td>
                 <td>
                     <a href="deleteBill?id=${transaction.id}"><button type="button">delete</button></a>
+                    <a href="editBill?id=${transaction.id}&bill_time=${transaction.bill_time}&category=${transaction.category}&amount=${transaction.amount}&bill_type=${transaction.bill_type}"><button type="button">edit</button></a>
                 </td>
             </tr>
         </c:forEach>
