@@ -88,6 +88,7 @@ public class Servlet_sub_stat_annual extends HttpServlet
         incomeList.add(salary);
         incomeList.add(property);
         incomeList.add(exOther);
+        request.getSession().setAttribute("year",year);
         request.getSession().setAttribute("incomeList", incomeList);
         request.getSession().setAttribute("expendList", expendList);
         request.getRequestDispatcher("/sub_stat_annual.jsp").forward(request, response);

@@ -36,7 +36,7 @@
 
 
     <table>
-        <h1>Expend Analysis</h1>
+        <h1>${year} ${month} Expend Analysis</h1>
         <thead>
         <tr>
             <th>Catering</th>
@@ -58,7 +58,7 @@
     </table>
 
     <table>
-        <h1>Income Analysis</h1>
+        <h1>${year} ${month} Income Analysis</h1>
         <thead>
         <tr>
             <th>Salary</th>
