@@ -11,21 +11,29 @@
   <h1>Edit Bills</h1>
   <form action="editbills" method="post">
     <div>
-      <label for="btime">BillTime：</label> <input type="text" id="btime"
-                                                  name="btime" required> <span id="billDateError"
-                                                                               style="color: red;"></span>
+      <label for="btime">BillTime：</label>
+      <input type="text" id="btime" name="btime" required>
+      <span id="billDateError" style="color: red;"></span>
     </div>
 
     <div>
-      <label for="category">Choice category：</label> <select id="category"
-                                                             name="category" required>
-      <option value="">choice</option>
-      <option value="catering">catering</option>
-      <option value="transportation">transportation</option>
-      <option value="shopping">shopping</option>
-      <option value="daily expense">daily expense</option>
-      <option value="oter">other</option>
-    </select> <span id="categoryError" style="color: red;"></span>
+      <label for="category">Choice category：</label>
+      <select id="category" name="category" required>
+        <option value="">choice</option>
+        <optgroup label="Expenses">
+          <option value="catering">Catering</option>
+          <option value="transportation">Transportation</option>
+          <option value="shopping">Shopping</option>
+          <option value="daily expense">Daily expense</option>
+          <option value="other">Other</option>
+        </optgroup>
+        <optgroup label="Income">
+          <option value="income-salary">Salary income</option>
+          <option value="income-property">Property income</option>
+          <option value="income-other">Other income</option>
+        </optgroup>
+      </select>
+      <span id="categoryError" style="color: red;"></span>
     </div>
 
     <div>
