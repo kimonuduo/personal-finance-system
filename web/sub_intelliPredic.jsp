@@ -1,5 +1,6 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 <html>
 <head>
     <title>Income & Expend  Stat</title>
@@ -23,8 +24,8 @@
         <tr>
             <td>${dataList[0]}</td>
             <td>${dataList[1]}</td>
-            <td><p id="Balance"></p><button type="button" onclick="showBalance()">click to Balance</button></td>
-            <td><p id="financialRating"></p> <button type="button" onclick="showFinancialRating()">click to evaluation</button></td>
+            <td><fmt:formatNumber value="${dataList[0] - dataList[1]}" minFractionDigits="2" groupingUsed="false" /></td>
+            <td><p id="financialRating"></p></td>
         </tr>
         </tbody>
     </table>
@@ -33,20 +34,17 @@
     var ratio = '${dataList[1]}' / '${dataList[0]}'; //这里插入数据
  	var ratingText;
   	if (ratio < 0.5) {
-    ratingText = "Good financial position, can spend freely";
+    	ratingText = "Good financial position, can spend freely";
   	} else if (ratio < 0.7) {
-    ratingText = "Good financial position";
+    	ratingText = "Good financial position";
   	} else if (ratio < 0.9) {
-    ratingText = "Poor financial position, please notice the balance";
+    	ratingText = "Poor financial position, please notice the balance";
   	} else {
-    ratingText = "Poor financial position, please refrain from spending";
+    	ratingText = "Poor financial position, please refrain from spending";
   	}
-  	document.getElementById("financialRating").innerText = ratingText;
+  	document.getElementById("financialRating").innerText = "Ratio is: " + parseFloat(ratio).toFixed(3) +"\n" + ratingText;
   	}
-  	function showBalance(){
-  	var Balance = '${dataList[0]}'-'${dataList[1]}';
-  	document.getElementById("Balance").innerText = Balance;
-  	}
+  	window.onload = showFinancialRating;
 </script>
 </div>
 
