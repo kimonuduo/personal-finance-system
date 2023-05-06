@@ -4,6 +4,7 @@
   <title>Account Book</title>
   <link href="static/index.css" rel="stylesheet" type="text/css" />
   <link href="static/table.css" rel="stylesheet" type="text/css" />
+  <link href="static/content.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
 <%@include file="header.jsp"%>

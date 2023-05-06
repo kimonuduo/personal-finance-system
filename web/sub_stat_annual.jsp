@@ -9,6 +9,8 @@
 <%@include file="header.jsp" %>
 <div class="site-content">
   <h1>Income & Expend Statistic</h1>
+
+  <!-- 年份下拉选择器 -->
   <label for="year-select">Year:</label>
   <select id="year-select" name="year">
     <script>
