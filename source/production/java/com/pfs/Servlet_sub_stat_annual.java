@@ -29,7 +29,6 @@ public class Servlet_sub_stat_annual extends HttpServlet
         double salary = 0;
         double property = 0;
         double exOther = 0;
-        System.out.println(year);
 
         for (Transaction t : transactionsList) {
             int thisyear = t.getBill_time().getYear() + 1900;
