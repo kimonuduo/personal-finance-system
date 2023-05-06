@@ -13,7 +13,7 @@
   <form action="editSingleBill" method="post">
     <div>
       <label for="btime">BillTime：</label>
-      <input type="text" id="btime" name="btime" value= "${param.bill_time}" required>
+      <input type="date" id="btime" name="btime" value= "${param.bill_time}" required>
       <span id="billDateError" style="color: red;"></span>
     </div>
 
@@ -50,22 +50,14 @@
     // 数据验证
     var form = document.querySelector('form');
     form.addEventListener('submit', function(event) {
-      var billDate = document.getElementById('btime').value;
+      
       var category = document.getElementById('category').value;
       var amount = document.getElementById('amount').value;
 
-      var billDateError = document.getElementById('billDateError');
       var categoryError = document.getElementById('categoryError');
       var amountError = document.getElementById('amountError');
 
       var isValid = true;
-
-      if (!/^\d{4}.\d{2}.\d{2}$/.test(billDate)) {
-        billDateError.innerHTML = 'please input right type of date（yyyy-MM-dd）';
-        isValid = false;
-      } else {
-        billDateError.innerHTML = '';
-      }
 
       if (category === '') {
         categoryError.innerHTML = 'please choice the category';
