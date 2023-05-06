@@ -23,7 +23,7 @@
         <tr>
             <td>${dataList[0]}</td>
             <td>${dataList[1]}</td>
-            <td>${dataList[0]}-${dataList[1]}</td>
+            <td><p id="Balance"></p><button type="button" onclick="showBalance()">click to Balance</button></td>
             <td><p id="financialRating"></p> <button type="button" onclick="showFinancialRating()">click to evaluation</button></td>
         </tr>
         </tbody>
@@ -42,7 +42,11 @@
     ratingText = "Poor financial position, please refrain from spending";
   	}
   	document.getElementById("financialRating").innerText = ratingText;
-}
+  	}
+  	function showBalance(){
+  	var Balance = '${dataList[0]}'-'${dataList[1]}';
+  	document.getElementById("Balance").innerText = Balance;
+  	}
 </script>
 </div>
 

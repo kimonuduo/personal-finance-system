@@ -33,9 +33,9 @@ public class Servlet_sub_stat extends HttpServlet
 		double exOther = 0;
 
 		for (Transaction t : transactionsList) {
-			if (t.getExpend_type().equals("0")) {
+			if (t.getBill_type().equals("0")) {
 				totalIncome += t.getAmount();
-			} else if (t.getExpend_type().equals("1")) {
+			} else if (t.getBill_type().equals("1")) {
 				totalExpend += t.getAmount();
 			}
 		}
