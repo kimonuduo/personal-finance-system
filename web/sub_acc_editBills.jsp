@@ -18,7 +18,7 @@
             <th>Bill type</th>
             <th>Price</th>
             <th>Income/Expend</th>
-            <th>Delete</th>
+            <th>Edit</th>
         </tr>
         </thead>
         <tbody>
@@ -32,7 +32,8 @@
                 <td>${transaction.bill_type}</td>
                 <td>
                     <form action="" method="post">
-                        <button>Delete</button>
+                        <button onclick="">Delete</button>
+                        <button onclick="">Edit</button>
                     </form>
                 </td>
             </tr>

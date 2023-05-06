@@ -59,7 +59,7 @@
       var isValid = true;
 
       if (!/^\d{4}.\d{2}.\d{2}$/.test(billDate)) {
-        billDateError.innerHTML = 'please input right type of date（yyyy.MM.dd）';
+        billDateError.innerHTML = 'please input right type of date（yyyy-MM-dd）';
         isValid = false;
       } else {
         billDateError.innerHTML = '';
