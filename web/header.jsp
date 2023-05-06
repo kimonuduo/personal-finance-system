@@ -17,7 +17,7 @@
         <li><a href="sub_acc_addBill.jsp">Add Bills</a></li>
       </ul>
     </li>
-    <li><a href="sub_stat.jsp">📈Income & Expend  Stat</a>
+    <li><a href="${pageContext.request.contextPath}/sub_stat">📈Income & Expend  Stat</a>
       <ul>
         <li><a href="sub_stat_annual.jsp">Annual</a></li>
         <li><a href="sub_stat_monthly.jsp">Monthly</a></li>

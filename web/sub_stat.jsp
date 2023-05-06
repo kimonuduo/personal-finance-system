@@ -1,4 +1,5 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <html>
 <head>
     <title>Income & Expend  Stat</title>
@@ -22,11 +23,11 @@
         </thead>
         <tbody>
         <tr>
-            <td>1%</td>
-            <td>2%</td>
-            <td>3%</td>
-            <td>4%</td>
-            <td>5%</td>
+            <td>${String.format("%.2f", incomeList[0])}%</td>
+            <td>${String.format("%.2f", incomeList[1])}%</td>
+            <td>${String.format("%.2f", incomeList[2])}%</td>
+            <td>${String.format("%.2f", incomeList[3])}%</td>
+            <td>${String.format("%.2f", incomeList[4])}%</td>
         </tr>
         </tbody>
     </table>
@@ -36,15 +37,15 @@
         <thead>
         <tr>
             <th>Salary</th>
-            <th>transportation</th>
+            <th>Property</th>
             <th>Other</th>
         </tr>
         </thead>
         <tbody>
         <tr>
-            <td>1</td>
-            <td>2</td>
-            <td>3</td>
+            <td>${String.format("%.2f",expendList[0])}%</td>
+            <td>${String.format("%.2f",expendList[1])}%</td>
+            <td>${String.format("%.2f",expendList[2])}%</td>
         </tr>
         </tbody>
     </table>
