@@ -74,7 +74,7 @@ public class TransactionDAO {
 		int res = 0;
 		try {
 			Connection con = JdbcUtil.getConnection();
-			String sql = "delete from record where id=?";
+			String sql = "delete from bill where id=?";
 			PreparedStatement stm = con.prepareStatement(sql);
 			stm.setInt(1, id);
 			res = stm.executeUpdate();
