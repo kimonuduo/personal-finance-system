@@ -22,16 +22,16 @@
       <select id="category" name="category" required>
         <option value="">choice</option>
         <optgroup label="Expenses">
-          <option value="catering">Catering</option>
-          <option value="transportation">Transportation</option>
-          <option value="shopping">Shopping</option>
-          <option value="daily expense">Daily expense</option>
-          <option value="other">Other</option>
+          <option value="catering">catering</option>
+          <option value="transportation">transportation</option>
+          <option value="shopping">shopping</option>
+          <option value="daily expense">daily expense</option>
+          <option value="other">other</option>
         </optgroup>
         <optgroup label="Income">
-          <option value="income-salary">Salary income</option>
-          <option value="income-property">Property income</option>
-          <option value="income-other">Other income</option>
+          <option value="income-salary">salary income</option>
+          <option value="income-property">property income</option>
+          <option value="income-other">other income</option>
         </optgroup>
       </select>
       <span id="categoryError" style="color: red;"></span>

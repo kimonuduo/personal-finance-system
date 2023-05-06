@@ -9,11 +9,11 @@
 <body>
 <%@include file="header.jsp"%>
 <div class="site-content">
-  <h1>Edit Bills</h1>
-  <form action="sub_acc_addBill" method="post">
+  <h1>Edit Single Bill</h1>
+  <form action="editSingleBill" method="post">
     <div>
       <label for="btime">BillTime：</label>
-      <input type="text" id="btime" name="btime" required>
+      <input type="text" id="btime" name="btime" value= "${param.bill_time}" required>
       <span id="billDateError" style="color: red;"></span>
     </div>
 
@@ -22,23 +22,24 @@
       <select id="category" name="category" required>
         <option value="">choice</option>
         <optgroup label="Expenses">
-          <option value="catering">Catering</option>
-          <option value="transportation">Transportation</option>
-          <option value="shopping">Shopping</option>
-          <option value="daily expense">Daily expense</option>
-          <option value="other">Other</option>
+          <option value="catering" ${param.category == 'catering' ? 'selected' : ''}>catering</option>
+          <option value="transportation" ${param.category == 'transportation' ? 'selected' : ''}>transportation</option>
+          <option value="shopping" ${param.category == 'shopping' ? 'selected' : ''}>shopping</option>
+          <option value="daily expense" ${param.category == 'daily expense' ? 'selected' : ''}>daily expense</option>
+          <option value="other" ${param.category == 'other' ? 'selected' : ''}>other</option>
         </optgroup>
         <optgroup label="Income">
-          <option value="income-salary">Salary income</option>
-          <option value="income-property">Property income</option>
-          <option value="income-other">Other income</option>
+          <option value="income-salary" ${param.category == 'salary income' ? 'selected' : ''}>salary income</option>
+          <option value="income-property" ${param.category == 'property income' ? 'selected' : ''}>property income</option>
+          <option value="income-other" ${param.category == 'other income' ? 'selected' : ''}>other income</option>
         </optgroup>
       </select>
       <span id="categoryError" style="color: red;"></span>
     </div>
-
+	<input type="hidden" id="selectedLabel" name="selectedLabel" value="">
+	<input type="hidden" id="id" name="id" value="${param.id}">
     <div>
-      <label for="amount">Amount：</label> <input type="text" id="amount" name="amount" required>
+      <label for="amount">Amount：</label> <input type="text" id="amount" name="amount"  value= "${param.amount}" required>
       <span id="amountError" style="color: red;"></span>
     </div>
 
@@ -85,6 +86,14 @@
       }
     });
   </script>
+  <script>
+  document.getElementById('category').addEventListener('change', function() {
+    var select = this;
+    var option = select.options[select.selectedIndex];
+    var optgroup = option.parentNode;
+    document.getElementById('selectedLabel').value = optgroup.label;
+  });
+</script>
 
 </div>
 </body>

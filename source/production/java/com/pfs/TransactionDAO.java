@@ -57,7 +57,8 @@ public class TransactionDAO {
 				String category = res.getString("category");
 				String remark = res.getString("remark");
 				Date bill_time = res.getDate("bill_time");
-				transactionslist.add(new Transaction(id, user_id, amount, bill_type, expend_type, category, remark, bill_time));
+				transactionslist
+						.add(new Transaction(id, user_id, amount, bill_type, expend_type, category, remark, bill_time));
 			}
 			JdbcUtil.free(res, stm, con);
 			return transactionslist;
@@ -75,6 +76,27 @@ public class TransactionDAO {
 			String sql = "delete from bill where id=?";
 			PreparedStatement stm = con.prepareStatement(sql);
 			stm.setInt(1, id);
+			res = stm.executeUpdate();
+			JdbcUtil.free(null, stm, con);
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return res;
+	}
+
+	// edit
+	public int updateTransaction(Transaction transaction) {
+		int res = 0;
+		try {
+			Connection con = JdbcUtil.getConnection();
+			String sql = "update bill set amount=?,bill_type=?,category=?,bill_time=? where id=?";
+			PreparedStatement stm = con.prepareStatement(sql);
+			stm.setDouble(1, transaction.getAmount());
+			stm.setString(2, transaction.getBill_type());
+			stm.setString(3, transaction.getCategory());
+			stm.setDate(4, transaction.getBill_time());
+			stm.setInt(5, transaction.getId());
+	
 			res = stm.executeUpdate();
 			JdbcUtil.free(null, stm, con);
 		} catch (SQLException e) {

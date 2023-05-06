@@ -40,6 +40,15 @@ public class Transaction{
 		this.bill_time = bill_time;
 	}
 
+	public Transaction(int user_id, int id, Double amount, String bill_type, String category, Date bill_time) {
+		this.user_id = user_id;
+		this.id = id;
+		this.amount = amount;
+		this.bill_type = bill_type;
+		this.category = category;
+		this.bill_time = bill_time;
+	}
+
 	@Override
 	public String toString() {
 		return "Transaction [id=" + id + ", "
