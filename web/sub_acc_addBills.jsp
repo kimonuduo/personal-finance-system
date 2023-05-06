@@ -9,7 +9,7 @@
 <%@include file="header.jsp"%>
 <div class="site-content">
   <h1>Edit Bills</h1>
-  <form action="editbills" method="post">
+  <form action="sub_acc_addBills" method="post">
     <div>
       <label for="btime">BillTime：</label>
       <input type="text" id="btime" name="btime" required>
