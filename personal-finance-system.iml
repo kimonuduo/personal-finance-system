@@ -33,5 +33,6 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" exported="" scope="PROVIDED" name="Tomcat 11.0.0-M4" level="application_server_libraries" />
     <orderEntry type="library" name="mysql-connector-java-8.0.28" level="project" />
+    <orderEntry type="library" name="servlet-api" level="project" />
   </component>
 </module>

@@ -13,10 +13,11 @@
 <table>
     <thead>
     <tr>
-        <th>账单号</th>
-        <th>账单时间</th>
-        <th>消费种类</th>
-        <th>消费金额</th>
+        <th>Bill ID</th>
+        <th>Bill time</th>
+        <th>Bill type</th>
+        <th>Price</th>
+        <th>Income/Expend</th>
     </tr>
     </thead>
     <tbody>
@@ -27,6 +28,7 @@
  			<td>${transaction.bill_time}</td>
  			<td>${transaction.category}</td>
  			<td>${transaction.amount}</td>
+            <td>${transaction.bill_type}</td>
  		</tr>
  	</c:forEach>
   

@@ -10,32 +10,41 @@
 <div class="site-content">
     <h1>Income & Expend Statistic</h1>
     <table>
+        <h1>Expend Analysis</h1>
         <thead>
         <tr>
-            <th>账单号</th>
-            <th>账单时间</th>
-            <th>消费种类</th>
-            <th>消费金额</th>
+            <th>Catering</th>
+            <th>Transportation</th>
+            <th>Shopping</th>
+            <th>Daily Expense</th>
+            <th>Other</th>
         </tr>
         </thead>
         <tbody>
         <tr>
-            <td>001</td>
-            <td>2023-04-01</td>
-            <td>餐饮</td>
-            <td>50.00</td>
+            <td>1%</td>
+            <td>2%</td>
+            <td>3%</td>
+            <td>4%</td>
+            <td>5%</td>
         </tr>
+        </tbody>
+    </table>
+
+    <table>
+        <h1>Income Analysis</h1>
+        <thead>
         <tr>
-            <td>002</td>
-            <td>2023-04-10</td>
-            <td>交通</td>
-            <td>20.00</td>
+            <th>Salary</th>
+            <th>transportation</th>
+            <th>Other</th>
         </tr>
+        </thead>
+        <tbody>
         <tr>
-            <td>003</td>
-            <td>2023-04-20</td>
-            <td>购物</td>
-            <td>100.00</td>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
         </tr>
         </tbody>
     </table>

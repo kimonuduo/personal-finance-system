@@ -1,44 +1,62 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Account Book</title>
+    <title>Income & Expend  Stat</title>
     <link href="static/index.css" rel = "stylesheet" type = "text/css"/>
     <link href="static/table.css" rel = "stylesheet" type = "text/css"/>
 </head>
 <body>
 <%@include file="header.jsp" %>
 <div class="site-content">
-    <h1>Account Book</h1>
+    <h1>Income & Expend Statistic</h1>
+    <form name="reg_testdate">
+        <select name="YYYY" onchange="YYYYDD(this.value)">
+            <option value="">请选择 年</option>
+        </select>
+        <select name="MM" onchange="MMDD(this.value)">
+            <option value="">选择 月</option>
+        </select>
+    </form>
     <table>
+        <h1>Annual Expend Analysis</h1>
         <thead>
         <tr>
-            <th>账单号</th>
-            <th>账单时间</th>
-            <th>消费种类</th>
-            <th>消费金额</th>
+            <th>Catering</th>
+            <th>Transportation</th>
+            <th>Shopping</th>
+            <th>Daily Expense</th>
+            <th>Other</th>
         </tr>
         </thead>
         <tbody>
         <tr>
-            <td>001</td>
-            <td>2023-04-01</td>
-            <td>餐饮</td>
-            <td>50.00</td>
+            <td>1%</td>
+            <td>2%</td>
+            <td>3%</td>
+            <td>4%</td>
+            <td>5%</td>
         </tr>
+        </tbody>
+    </table>
+
+    <table>
+        <h1>Annual Income Analysis</h1>
+        <thead>
         <tr>
-            <td>002</td>
-            <td>2023-04-10</td>
-            <td>交通</td>
-            <td>20.00</td>
+            <th>Salary</th>
+            <th>transportation</th>
+            <th>Other</th>
         </tr>
+        </thead>
+        <tbody>
         <tr>
-            <td>003</td>
-            <td>2023-04-20</td>
-            <td>购物</td>
-            <td>100.00</td>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
         </tr>
         </tbody>
     </table>
 </div>
+
 </body>
 </html>

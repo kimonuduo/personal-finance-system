@@ -14,7 +14,7 @@
       <a href="${pageContext.request.contextPath}/sub_accountBook">📒 Account Book</a>
       <ul>
         <li><a href="sub_acc_editBills.jsp">Edit Bills</a></li>
-        <li><a href="sub_acc_editSub.jsp">Edit Subscribe</a></li>
+        <li><a href="sub_acc_addBills.jsp">Add Bills</a></li>
       </ul>
     </li>
     <li><a href="sub_stat.jsp">📈Income & Expend  Stat</a>

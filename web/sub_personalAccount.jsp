@@ -12,8 +12,8 @@
     <table>
         <thead>
         <tr>
-            <th>存款</th>
-            <th>monthly订阅</th>
+            <th>Total Income</th>
+            <th>Total Expend</th>
             <th>Salary</th>
             <th>其他</th>
         </tr>
