@@ -41,55 +41,58 @@ public class Servlet_sub_stat extends HttpServlet
 		}
 
 		for (Transaction t : transactionsList) {
-			if (t.getRemark().equals("catering")) {
+			if (t.getCategory().equals("catering")) {
 				catering += t.getAmount();
-			} else if (t.getRemark().equals("transportation")) {
+			} else if (t.getCategory().equals("transportation")) {
 				transportation += t.getAmount();
-			} else if (t.getRemark().equals("shopping")) {
+			} else if (t.getCategory().equals("shopping")) {
 				shopping += t.getAmount();
-			} else if (t.getRemark().equals("daily expense")) {
+			} else if (t.getCategory().equals("daily expense")) {
 				daily_expense += t.getAmount();
-			} else if (t.getRemark().equals("other")) {
+			} else if (t.getCategory().equals("other")) {
 				other += t.getAmount();
 			}
 		}
 
 		for (Transaction t : transactionsList) {
-			if (t.getRemark().equals("salary income")) {
+			if (t.getCategory().equals("salary income")) {
 				salary += t.getAmount();
-			} else if (t.getRemark().equals("property income")) {
+				System.out.println(salary);
+			} else if (t.getCategory().equals("property income")) {
 				property += t.getAmount();
-			} else if (t.getRemark().equals("other income")) {
+			} else if (t.getCategory().equals("other income")) {
 				exOther += t.getAmount();
 			}
 		}
 
 		List<Double> incomeList = new ArrayList<>();
 		List<Double> expendList = new ArrayList<>();
-		catering = (catering * 100.0) / totalIncome;
-		transportation = (transportation * 100.0) / totalIncome;
-		shopping = (shopping * 100.0) / totalIncome;
-		daily_expense = (daily_expense * 100.0) / totalIncome;
-		other = (other * 100.0) / totalIncome;
-		salary = (salary * 100.0) / totalExpend;
-		property = (property * 100.0) / totalExpend;
-		exOther = (exOther * 100.0) / totalExpend;
+		catering = (catering * 100.0) / totalExpend;
+		transportation = (transportation * 100.0) / totalExpend;
+		shopping = (shopping * 100.0) / totalExpend;
+		daily_expense = (daily_expense * 100.0) / totalExpend;
+		other = (other * 100.0) / totalExpend;
+		salary = (salary * 100.0) / totalIncome;
+		property = (property * 100.0) / totalIncome;
+		exOther = (exOther * 100.0) / totalIncome;
+		System.out.println(totalIncome);
+		System.out.println(salary);
 
 
-		incomeList.add(catering);
-		incomeList.add(transportation);
-		incomeList.add(shopping);
-		incomeList.add(daily_expense);
-		incomeList.add(other);
-		expendList.add(salary);
-		expendList.add(property);
-		expendList.add(exOther);
+		expendList.add(catering);
+		expendList.add(transportation);
+		expendList.add(shopping);
+		expendList.add(daily_expense);
+		expendList.add(other);
+		incomeList.add(salary);
+		incomeList.add(property);
+		incomeList.add(exOther);
 		request.getSession().setAttribute("incomeList", incomeList);
 		request.getSession().setAttribute("expendList", expendList);
 		request.getRequestDispatcher("/sub_stat.jsp").forward(request, response);
-		}
-
-		protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-			doGet(request, response);
-		}
 	}
+
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		doGet(request, response);
+	}
+}
