@@ -55,7 +55,7 @@
 
     </script>
     <table>
-        <h1>Annual Expend Analysis</h1>
+        <h1>Monthly Expend Analysis</h1>
         <thead>
         <tr>
             <th>Catering</th>
@@ -77,7 +77,7 @@
     </table>
 
     <table>
-        <h1>Annual Income Analysis</h1>
+        <h1>Monthly Income Analysis</h1>
         <thead>
         <tr>
             <th>Salary</th>
