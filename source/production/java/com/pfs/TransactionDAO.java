@@ -44,25 +44,22 @@ public class TransactionDAO {
 
 	// getAllBill 查询所有
 	public List<Transaction> getAllTransactions(int user_id) {
-
 		try {
-
 			Connection con = JdbcUtil.getConnection();
-			String sql = "select * from bill where user_id =? ";
+			String sql = "select * from bill where user_id = ? ";
 			PreparedStatement stm = con.prepareStatement(sql);
 			stm.setInt(1, user_id);
 			ResultSet res = stm.executeQuery();
 			List<Transaction> transactionslist = new ArrayList<>();
 			while (res.next()) {
+				Integer id = res.getInt("id");
 				Double amount = res.getDouble("amount");
 				String bill_type = res.getString("bill_type");
 				String expend_type = res.getString("expend_type");
 				String category = res.getString("category");
 				String remark = res.getString("remark");
 				Date bill_time = res.getDate("bill_time");
-				Integer id = res.getInt("id");
-				transactionslist
-						.add(new Transaction(id, user_id, amount, bill_type, expend_type, category, remark, bill_time));
+				transactionslist.add(new Transaction(id, user_id, amount, bill_type, expend_type, category, remark, bill_time));
 			}
 			JdbcUtil.free(res, stm, con);
 			return transactionslist;

@@ -1,4 +1,5 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <html>
 <head>
     <title>Income & Expend  Stat</title>
@@ -14,17 +15,13 @@
         <tr>
             <th>Total Income</th>
             <th>Total Expend</th>
-            <th>Salary</th>
-            <th>其他</th>
         </tr>
         </thead>
         <tbody>
-        <tr>
-            <td>12000.00</td>
-            <td>99.00</td>
-            <td>5000</td>
-            <td>50.00</td>
-        </tr>
+ 		<tr>
+ 			<td>${dataList[0]}</td>
+ 			<td>${dataList[1]}</td>
+ 		</tr>
         </tbody>
     </table>
 </div>

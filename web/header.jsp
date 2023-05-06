@@ -9,7 +9,7 @@
 <div class="header-separator"></div>
 <div class="top">
   <ul>
-    <li><a href="sub_personalAccount.jsp">👤Individual Account</a></li>
+    <li><a href="${pageContext.request.contextPath}/sub_personalAccount">👤Individual Account</a></li>
     <li>
       <a href="${pageContext.request.contextPath}/sub_accountBook">📒 Account Book</a>
       <ul>

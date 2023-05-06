@@ -28,7 +28,7 @@
  			<td>${transaction.bill_time}</td>
  			<td>${transaction.category}</td>
  			<td>${transaction.amount}</td>
-            <td>${transaction.bill_type}</td>
+            <td>${(transaction.bill_type == "0") ? "income" : (transaction.bill_type == "1") ? "expend" : ""}</td>
  		</tr>
  	</c:forEach>
   
@@ -37,9 +37,6 @@
 </div>
 
 
-<script type="text/javascript">
-    var value =<%=request.getAttribute("transactionsList") %>;
-</script>
 <script type="text/javascript" src="js/tlist_accountBook&stat.js"></script>
 </body>
 </html>

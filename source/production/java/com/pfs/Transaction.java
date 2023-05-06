@@ -22,7 +22,7 @@ public class Transaction{
 	private Date bill_time;
 	
 	public Transaction(Integer id, Integer user_id, Double amount, String bill_type, String expend_type, String category, String remark, Date bill_time) {
-		this.user_id = id;
+		this.id = id;
 		this.user_id = user_id;
 		this.amount = amount;
 		this.bill_type = bill_type;

@@ -29,7 +29,7 @@
                 <td>${transaction.bill_time}</td>
                 <td>${transaction.category}</td>
                 <td>${transaction.amount}</td>
-                <td>${transaction.bill_type}</td>
+                <td>${(transaction.bill_type == "0") ? "income" : (transaction.bill_type == "1") ? "expend" : ""}</td>
                 <td>
                     <form action="" method="post">
                         <button onclick="">Delete</button>
