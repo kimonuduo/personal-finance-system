@@ -35,7 +35,7 @@
     });
   </script>
   <table>
-    <h1>${selectedYear} Expend Analysis</h1>
+    <h1>Annual Expend Analysis</h1>
     <thead>
     <tr>
       <th>Catering</th>
