@@ -13,7 +13,7 @@
         <label for="year-select">Year:</label>
         <select id="year-select" name="year">
             <script>
-                var startYear = 2000;
+                var startYear = 2020;
                 var endYear = 2023;
                 for (var i = startYear; i <= endYear; i++) {
                     document.write('<option value="' + i + '">' + i + '</option>');
